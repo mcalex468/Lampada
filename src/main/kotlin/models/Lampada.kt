@@ -8,7 +8,7 @@ class Lampada {
     private var canviColor: String = "Blanc"
     private var canviIntensitat: Int = 0
     private var identificador: String? = null
-    private val colorsValids = listOf("Blanc", "Negre", "Blau", "Vermell", "Verd", "Rosa")
+    private val colorsValids = listOf("Blanc", "Cyan", "Blau", "Verd", "Vermell", "Lila")
 
     /*constructor(identificador: String= "Menjador",encendre: Boolean, canviColor: String, canviIntensitat: Int):this(identificador) {
         this.encendre = encendre
