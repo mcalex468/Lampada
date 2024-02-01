@@ -1,8 +1,35 @@
 package controlers
+import extensions.*
 import models.Lampada
 
 fun main() {
-    println("LAMPADA MENJADOR")
+
+    var lampadaMenjador: Lampada = Lampada()
+    lampadaMenjador.identificador("Làmpada Menjador")
+    lampadaMenjador.encendre()
+    repeat(3) { lampadaMenjador.canviarColor() }
+    lampadaMenjador.canviarIntensitat()
+
+    var lampadaCuina: Lampada = Lampada()
+    lampadaCuina.identificador("Làmpada Cuina")
+    lampadaCuina.encendre()
+    repeat(2) { lampadaCuina.canviarColor() }
+    lampadaCuina.canviarIntensitat()
+    lampadaCuina.apagar()
+    lampadaCuina.canviarColor()
+    lampadaCuina.encendre()
+    lampadaCuina.canviarColor()
+    lampadaCuina.canviarIntensitat()
+
+}
+
+
+
+
+
+
+    /* ESTABA INCORRECTE
+      println("LAMPADA MENJADOR")
     var lampadaMenjador: Lampada = Lampada("Menjador")
     lampadaMenjador.encendre()
     println(lampadaMenjador)
@@ -54,4 +81,8 @@ fun main() {
     println("control")
     lampadaCuina.canviarIntensitat(5)
     println()
-}
+     */
+
+
+
+

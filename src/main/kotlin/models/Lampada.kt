@@ -1,51 +1,78 @@
 package models
 
-class Lampada(val identificador: String) {
+import extensions.*
+
+class Lampada {
     //Estructura, coneguda com a propietats o atributs
     private var encendre: Boolean = false
     private var canviColor: String = "Blanc"
     private var canviIntensitat: Int = 0
+    private var identificador: String? = null
+    private val colorsValids = listOf("Blanc", "Negre", "Blau", "Vermell", "Verd", "Rosa")
 
-    constructor(identificador: String= "Menjador",encendre: Boolean, canviColor: String, canviIntensitat: Int):this(identificador) {
+    /*constructor(identificador: String= "Menjador",encendre: Boolean, canviColor: String, canviIntensitat: Int):this(identificador) {
         this.encendre = encendre
         this.canviColor = canviColor
         this.canviIntensitat = canviIntensitat
 
     }
-
-   /* constructor(identificador: String = "Cuina",encendre: Boolean, canviColor: String, canviIntensitat: Int):this(identificador) {
+   constructor(identificador: String = "Cuina",encendre: Boolean, canviColor: String, canviIntensitat: Int):this(identificador) {
         this.encendre = encendre
         this.canviColor = canviColor
         this.canviIntensitat = canviIntensitat
 
     } */
+    fun identificador(identificadorActual: String) {
+        identificador = identificadorActual
+    }
 
     fun encendre() {
         encendre = true
-        //mostrarEstat()
+        estatActual()
     }
 
     fun apagar() {
         encendre = false
-       // mostrarEstat()
+        estatActual()
     }
 
-    fun canviarColor(nuevoColor: String) {
-        canviColor = nuevoColor
-        //mostrarEstat()
-    }
+    fun canviarColor() {
+        val colorUsuari = readWord("Introdueix el color desitjat:", "Has d'escollir un color.")
 
-    fun canviarIntensitat(nuevaIntensidad: Int) {
-        if (nuevaIntensidad in 0..5) {
-            canviIntensitat = nuevaIntensidad
-           // mostrarEstat()
-        } else {
-            println("Error: La intensidad debe estar entre 0 y 5.")
+        canviColor = when (colorUsuari.toLowerCase()) {
+            "blanc" -> "${WHITE}$colorUsuari${RESET}"
+            "cyan" -> "${CYAN}$colorUsuari${RESET}"
+            "blau" -> "${BLUE}$colorUsuari${RESET}"
+            "verd" -> "${GREEN}$colorUsuari${RESET}"
+            "vermell" -> "${RED}$colorUsuari${RESET}"
+            "lila" -> "${PURPLE}$colorUsuari${RESET}"
+            in colorsValids -> colorUsuari
+            else -> println("${RED_BOLD}Error: Color no vàlid. S'usarà el color per defecte: Blanc.${RESET}").toString()
         }
+        estatActual()
     }
 
 
-    // Getters + Setters LAMPADA
+    fun canviarIntensitat() {
+        do {
+            canviIntensitat = readInt(
+                "Introdueix la intensitat (1-5)",
+                "${GREEN_BOLD} Cal introduir un valor numèric.${RESET}",
+                "La intensitat ha d'estar entre 1 i 5.",
+                1,
+                5
+            )
+        } while (canviIntensitat < 5)
+        estatActual()
+    }
+
+    private fun estatActual() {
+        var estat = if (encendre) "${CYAN}Encesa${RESET}" else "${YELLOW}Apagada${RESET}"
+        println("${identificador ?: "Làmpada"} --> Estat: $estat --> Color: ${canviColor} --> Intensitat: ${canviIntensitat}")
+    }
+
+
+    // Getters + Setters LAMPADA (NO els utilitzem)
 
     fun getEncendre(): Boolean {
         return encendre
@@ -70,9 +97,11 @@ class Lampada(val identificador: String) {
     fun setcanviIntensitat(canviIntensitat: Int) {
         this.canviIntensitat = canviIntensitat
     }
+}
 
-
+/*
     override fun toString(): String {
         return ("Estat: ${if (encendre) "Encesa" else "Apagada"} --> Color: $canviColor --> Intensitat: $canviIntensitat")
     }
 }
+*/
