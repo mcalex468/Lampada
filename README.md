@@ -3,12 +3,10 @@
 ![Lampada](https://github.com/mcalex468/Lampada/blob/master/lampada.jpg)
 
 #### MENU
-[Classe](#Classe Lampada)
-[Propietats](#Ppropietats)
-[Classe](#Mètodes)
-[Classe](#Main (Exemple)
-
-
+- [Classe](#classe-lampada)
+- [Propietats](#propietats)
+- [Mètodes](#mètodes)
+- [Main (Exemple)](#main-exemple)
 
 # Classe Lampada
 
