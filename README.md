@@ -2,6 +2,14 @@
 
 ![Lampada](https://github.com/mcalex468/Lampada/blob/master/lampada.jpg)
 
+#### MENU
+[Classe](#Classe Lampada)
+[Propietats](#Ppropietats)
+[Classe](#Mètodes)
+[Classe](#Main (Exemple)
+
+
+
 # Classe Lampada
 
 La classe `Lampada` representa una llàntia amb funcionalitats d'encendre, apagar, canviar color i intensitat.
