@@ -3,10 +3,32 @@
 ![Lampada](https://github.com/mcalex468/Lampada/blob/master/lampada.jpg)
 
 #### MENU
+- [Diagrama](#diagrama.uml)
 - [Classe](#classe-lampada)
 - [Propietats](#propietats)
 - [Mètodes](#mètodes)
 - [Main (Exemple)](#main-exemple)
+
+#### Diagrama UML
+
+@startuml
+class Lampada {
+  - encendre: Boolean = false
+  - canviColor: String = "Blanc"
+  - canviIntensitat: Int = 0
+  - identificador: String? = null
+  - colorsValids: List<String> = ["Blanc", "Cyan", "Blau", "Verd", "Vermell", "Lila"]
+
+  + identificador(identificadorActual: String)
+  + encendre()
+  + apagar()
+  + canviarColor()
+  + canviarIntensitat()
+  - estatActual()
+}
+
+@enduml
+
 
 # Classe Lampada
 
