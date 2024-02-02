@@ -2,28 +2,29 @@
 
 ![Lampada](https://github.com/mcalex468/Lampada/blob/master/lampada.jpg)
 
-# Clase Lampada
+# Classe Lampada
 
-La clase `Lampada` representa una lámpara con funcionalidades de encendido, apagado, cambio de color e intensidad. 
+La classe `Lampada` representa una llàntia amb funcionalitats d'encendre, apagar, canviar color i intensitat.
 
-## Propiedades
+## Propietats
 
-- `encendre`: Indica si la lámpara está encendida o apagada.
-- `canviColor`: Representa el color actual de la lámpara.
-- `canviIntensitat`: Almacena la intensidad actual de la lámpara.
-- `identificador`: Etiqueta identificativa de la lámpara.
-- `colorsValids`: Lista de colores válidos.
+- `encendre`: Indica si la llàntia està encesa o apagada.
+- `canviColor`: Representa el color actual de la llàntia.
+- `canviIntensitat`: Emmagatzema la intensitat actual de la llàntia.
+- `identificador`: Etiqueta identificativa de la llàntia.
+- `colorsValids`: Llista de colors vàlids.
 
-## Métodos
+## Mètodes
 
-- `identificador(identificadorActual: String)`: Establece el identificador de la lámpara.
-- `encendre()`: Enciende la lámpara y muestra el estado actual.
-- `apagar()`: Apaga la lámpara y muestra el estado actual.
-- `canviarColor()`: Permite al usuario cambiar el color de la lámpara.
-- `canviarIntensitat()`: Permite al usuario cambiar la intensidad de la lámpara.
-- `estatActual()`: Muestra el estado actual de la lámpara.
+- `identificador(identificadorActual: String)`: Estableix l'identificador de la llàntia.
+- `encendre()`: Encén la llàntia i mostra l'estat actual.
+- `apagar()`: Apaga la llàntia i mostra l'estat actual.
+- `canviarColor()`: Permet a l'usuari canviar el color de la llàntia.
+- `canviarIntensitat()`: Permet a l'usuari canviar la intensitat de la llàntia.
+- `estatActual()`: Mostra l'estat actual de la llàntia.
 
-## Uso en Ejemplo
+
+## Main (Exemple)
 
 ```kotlin
 // Ejemplo de uso en un programa Kotlin
@@ -49,6 +50,8 @@ fun main() {
 }
 
 
-### Autor
 
+#### Autor
 Alex Martin Cobo
+
+
