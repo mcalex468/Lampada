@@ -1,4 +1,4 @@
 #### Lampada
 
 ![Lampada](
-![Texto alternativo](enlace-a-la-imagen.jpg)
+![Texto alternativo](https://github.com/mcalex468/Lampada/blob/master/lampada.jpg)
